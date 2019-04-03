@@ -18,6 +18,16 @@ class LoginBusiness(object):
         self.driver = driver
         self.lh = LoginHandle(self.driver)
 
+    # DDT调用登录总功能
+    def login_function(self, useremail, userpw, assertcode, asserttext):
+        self.lh.send_email(useremail)
+        self.lh.send_pw(userpw)
+        self.lh.click_loginbt()
+        if self.lh.get_error_msg(assertcode) == asserttext:
+            return True
+        else:
+            return False
+
     # 密码不正确
     def pw_error(self, useremail, userpw):
         self.lh.send_email(useremail)

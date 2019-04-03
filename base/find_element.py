@@ -61,15 +61,6 @@ if __name__ == "__main__":
     find_element.iframe('login_iframe')
     element = find_element.get_element('email_inputbox')
     print(element)
-
-    # element1.send_keys("amaizng_2010@126.com")
-    # element2.send_keys("123456")
-    # find_element.get_element('login_bt').click()
-    # time.sleep(3)
-    # ee = find_element.get_element('emailorpw_error')
-    # print(ee.text)
-    # sleep(3)
-    # print(element1.get_attribute("value"))
     driver.close()
 
 

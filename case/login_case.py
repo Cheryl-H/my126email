@@ -9,12 +9,12 @@ __time__   : 2019/3/18 14:36
 
 """
 
-import sys
+from time import sleep
 import ddt
 import unittest
 from business.login_business import LoginBusiness
 from selenium import webdriver
-from HTMLTestRunner import HTMLTestRunner
+from HTMLTestRunner_PY3 import HTMLTestRunner
 
 @ddt.ddt
 class LoginCase(unittest.TestCase):
@@ -28,10 +28,20 @@ class LoginCase(unittest.TestCase):
     def tearDown(self):
         self.driver.close()
 
-    @ddt.data(["amazing_2010@126.com", "123456"],
-             ["ssdfff","123456"])
+    @ddt.data(["amazing_2010@126.com", "123456", "emailorpw_error", "帐号或密码错误"],
+              ["amazing_2011@126.com", "123456", "emailorpw_error", "帐号或密码错误"],
+              ["amazing_2010@126.com", "", "pw_empty_error", "请输入密码"],
+              ["", "123456", "email_empty_error", "请输入帐号"]
+              )
 
     @ddt.unpack
+    def test_login(self,useremail, pw, assertcode, asserttext):
+        print(useremail, pw, assertcode, asserttext)
+        email_e = self.login.login_function(useremail, pw, assertcode, asserttext)
+        sleep(1)
+        self.assertTrue(email_e, "测试通过")
+
+    """
     def test_email_error(self, useremail, pw):
         '''邮箱错误'''
         email_e = self.login.email_error(useremail, pw)
@@ -41,6 +51,7 @@ class LoginCase(unittest.TestCase):
         '''密码错误'''
         pw_e = self.login.pw_error(useremail, pw)
         self.assertTrue(pw_e, "test_pw_error测试通过")
+    """
 
 if __name__ == "__main__":
     suite = unittest.TestSuite()

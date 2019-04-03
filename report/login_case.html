@@ -3,283 +3,273 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>LoginCaseTestReport</title>
-    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta name="generator" content="HTMLTestRunner 0.9.1"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/echarts/3.8.5/echarts.common.min.js"></script>
+    <!-- <script type="text/javascript" src="js/echarts.common.min.js"></script> -->
+    
+    
 <style type="text/css" media="screen">
-body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
-table       { font-size: 100%; }
-pre         { }
+    body        { font-family: Microsoft YaHei,Consolas,arial,sans-serif; font-size: 80%; }
+    table       { font-size: 100%; }
+    pre         { white-space: pre-wrap;word-wrap: break-word; }
 
-/* -- heading ---------------------------------------------------------------------- */
-h1 {
-	font-size: 16pt;
-	color: gray;
-}
-.heading {
-    margin-top: 0ex;
-    margin-bottom: 1ex;
-}
+    /* -- heading ---------------------------------------------------------------------- */
+    h1 {
+        font-size: 16pt;
+        color: gray;
+    }
+    .heading {
+        margin-top: 0ex;
+        margin-bottom: 1ex;
+    }
 
-.heading .attribute {
-    margin-top: 1ex;
-    margin-bottom: 0;
-}
+    .heading .attribute {
+        margin-top: 1ex;
+        margin-bottom: 0;
+    }
 
-.heading .description {
-    margin-top: 4ex;
-    margin-bottom: 6ex;
-}
+    .heading .description {
+        margin-top: 2ex;
+        margin-bottom: 3ex;
+    }
 
-/* -- css div popup ------------------------------------------------------------------------ */
-a.popup_link {
-}
+    /* -- css div popup ------------------------------------------------------------------------ */
+    a.popup_link {
+    }
 
-a.popup_link:hover {
-    color: red;
-}
+    a.popup_link:hover {
+        color: red;
+    }
 
-.popup_window {
-    display: none;
-    position: relative;
-    left: 0px;
-    top: 0px;
-    /*border: solid #627173 1px; */
-    padding: 10px;
-    background-color: #E6E6D6;
-    font-family: "Lucida Console", "Courier New", Courier, monospace;
-    text-align: left;
-    font-size: 8pt;
-    width: 500px;
-}
+    .popup_window {
+        display: none;
+        position: relative;
+        left: 0px;
+        top: 0px;
+        /*border: solid #627173 1px; */
+        padding: 10px;
+        /*background-color: #E6E6D6; */
+        font-family: "Lucida Console", "Courier New", Courier, monospace;
+        text-align: left;
+        font-size: 8pt;
+        /* width: 500px;*/
+    }
 
-}
-/* -- report ------------------------------------------------------------------------ */
-#show_detail_line {
-    margin-top: 3ex;
-    margin-bottom: 1ex;
-}
-#result_table {
-    width: 80%;
-    border-collapse: collapse;
-    border: 1px solid #777;
-}
-#header_row {
-    font-weight: bold;
-    color: white;
-    background-color: #777;
-}
-#result_table td {
-    border: 1px solid #777;
-    padding: 2px;
-}
-#total_row  { font-weight: bold; }
-.passClass  { background-color: #6c6; }
-.failClass  { background-color: #c60; }
-.errorClass { background-color: #c00; }
-.passCase   { color: #6c6; }
-.failCase   { color: #c60; font-weight: bold; }
-.errorCase  { color: #c00; font-weight: bold; }
-.hiddenRow  { display: none; }
-.testcase   { margin-left: 2em; }
+    }
+    /* -- report ------------------------------------------------------------------------ */
+    #show_detail_line {
+        margin-top: 3ex;
+        margin-bottom: 1ex;
+    }
+    #result_table {
+        width: 99%;
+    }
+    #header_row {
+        font-weight: bold;
+        color: #303641;
+        background-color: #ebebeb;
+    }
+    #total_row  { font-weight: bold; }
+    .passClass  { background-color: #bdedbc; }
+    .failClass  { background-color: #ffefa4; }
+    .errorClass { background-color: #ffc9c9; }
+    .passCase   { color: #6c6; }
+    .failCase   { color: #FF6600; font-weight: bold; }
+    .errorCase  { color: #c00; font-weight: bold; }
+    .hiddenRow  { display: none; }
+    .testcase   { margin-left: 2em; }
 
 
-/* -- ending ---------------------------------------------------------------------- */
-#ending {
-}
+    /* -- ending ---------------------------------------------------------------------- */
+    #ending {
+    }
 
+    #div_base {
+                position:absolute;
+                top:0%;
+                left:5%;
+                right:5%;
+                width: auto;
+                height: auto;
+                margin: -15px 0 0 0;
+    }
 </style>
 
+    
 </head>
 <body>
-<script language="javascript" type="text/javascript"><!--
-output_list = Array();
+    <script language="javascript" type="text/javascript"><!--
+    output_list = Array();
 
-/* level - 0:Summary; 1:Failed; 2:All */
-function showCase(level) {
-    trs = document.getElementsByTagName("tr");
-    for (var i = 0; i < trs.length; i++) {
-        tr = trs[i];
-        id = tr.id;
-        if (id.substr(0,2) == 'ft') {
-            if (level < 1) {
-                tr.className = 'hiddenRow';
+    /* level - 0:Summary; 1:Failed; 2:All */
+    function showCase(level) {
+        trs = document.getElementsByTagName("tr");
+        for (var i = 0; i < trs.length; i++) {
+            tr = trs[i];
+            id = tr.id;
+            if (id.substr(0,2) == 'ft') {
+                if (level < 1) {
+                    tr.className = 'hiddenRow';
+                }
+                else {
+                    tr.className = '';
+                }
             }
-            else {
-                tr.className = '';
-            }
-        }
-        if (id.substr(0,2) == 'pt') {
-            if (level > 1) {
-                tr.className = '';
-            }
-            else {
-                tr.className = 'hiddenRow';
+            if (id.substr(0,2) == 'pt') {
+                if (level > 1) {
+                    tr.className = '';
+                }
+                else {
+                    tr.className = 'hiddenRow';
+                }
             }
         }
     }
-}
 
 
-function showClassDetail(cid, count) {
-    var id_list = Array(count);
-    var toHide = 1;
-    for (var i = 0; i < count; i++) {
-        tid0 = 't' + cid.substr(1) + '.' + (i+1);
-        tid = 'f' + tid0;
-        tr = document.getElementById(tid);
-        if (!tr) {
-            tid = 'p' + tid0;
+    function showClassDetail(cid, count) {
+        var id_list = Array(count);
+        var toHide = 1;
+        for (var i = 0; i < count; i++) {
+            tid0 = 't' + cid.substr(1) + '.' + (i+1);
+            tid = 'f' + tid0;
             tr = document.getElementById(tid);
+            if (!tr) {
+                tid = 'p' + tid0;
+                tr = document.getElementById(tid);
+            }
+            id_list[i] = tid;
+            if (tr.className) {
+                toHide = 0;
+            }
         }
-        id_list[i] = tid;
-        if (tr.className) {
-            toHide = 0;
+        for (var i = 0; i < count; i++) {
+            tid = id_list[i];
+            if (toHide) {
+                document.getElementById('div_'+tid).style.display = 'none'
+                document.getElementById(tid).className = 'hiddenRow';
+            }
+            else {
+                document.getElementById(tid).className = '';
+            }
         }
     }
-    for (var i = 0; i < count; i++) {
-        tid = id_list[i];
-        if (toHide) {
-            document.getElementById('div_'+tid).style.display = 'none'
-            document.getElementById(tid).className = 'hiddenRow';
+
+
+    function showTestDetail(div_id){
+        var details_div = document.getElementById(div_id)
+        var displayState = details_div.style.display
+        // alert(displayState)
+        if (displayState != 'block' ) {
+            displayState = 'block'
+            details_div.style.display = 'block'
         }
         else {
-            document.getElementById(tid).className = '';
+            details_div.style.display = 'none'
         }
     }
-}
 
 
-function showTestDetail(div_id){
-    var details_div = document.getElementById(div_id)
-    var displayState = details_div.style.display
-    // alert(displayState)
-    if (displayState != 'block' ) {
-        displayState = 'block'
-        details_div.style.display = 'block'
+    function html_escape(s) {
+        s = s.replace(/&/g,'&amp;');
+        s = s.replace(/</g,'&lt;');
+        s = s.replace(/>/g,'&gt;');
+        return s;
     }
-    else {
-        details_div.style.display = 'none'
+
+    /* obsoleted by detail in <div>
+    function showOutput(id, name) {
+        var w = window.open("", //url
+                        name,
+                        "resizable,scrollbars,status,width=800,height=450");
+        d = w.document;
+        d.write("<pre>");
+        d.write(html_escape(output_list[id]));
+        d.write("\n");
+        d.write("<a href='javascript:window.close()'>close</a>\n");
+        d.write("</pre>\n");
+        d.close();
     }
-}
+    */
+    --></script>
 
+    <div id="div_base">
+        
+    <div class='page-header'>
+        <h1>LoginCaseTestReport</h1>
+    <p class='attribute'><strong>开始时间:</strong> 2019-04-03 16:38:40</p>
+<p class='attribute'><strong>运行时长:</strong> 0:00:26.728766</p>
+<p class='attribute'><strong>状态:</strong> 通过 2 失败 2</p>
 
-function html_escape(s) {
-    s = s.replace(/&/g,'&amp;');
-    s = s.replace(/</g,'&lt;');
-    s = s.replace(/>/g,'&gt;');
-    return s;
-}
+    </div>
+    <div style="float: left;width:50%;"><p class='description'>20190318第一轮测试报告</p></div>
+    <div id="chart" style="width:50%;height:400px;float:left;"></div>
 
-/* obsoleted by detail in <div>
-function showOutput(id, name) {
-    var w = window.open("", //url
-                    name,
-                    "resizable,scrollbars,status,width=800,height=450");
-    d = w.document;
-    d.write("<pre>");
-    d.write(html_escape(output_list[id]));
-    d.write("\n");
-    d.write("<a href='javascript:window.close()'>close</a>\n");
-    d.write("</pre>\n");
-    d.close();
-}
-*/
---></script>
-
-<div class='heading'>
-<h1>LoginCaseTestReport</h1>
-<p class='attribute'><strong>Start Time:</strong> 2019-03-19 19:33:24</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:21.679287</p>
-<p class='attribute'><strong>Status:</strong> Pass 1 Failure 1 Error 1</p>
-
-<p class='description'>20190318第一轮测试报告</p>
-</div>
-
-
-
-<p id='show_detail_line'>Show
-<a href='javascript:showCase(0)'>Summary</a>
-<a href='javascript:showCase(1)'>Failed</a>
-<a href='javascript:showCase(2)'>All</a>
-</p>
-<table id='result_table'>
-<colgroup>
-<col align='left' />
-<col align='right' />
-<col align='right' />
-<col align='right' />
-<col align='right' />
-<col align='right' />
-</colgroup>
-<tr id='header_row'>
-    <td>Test Group/Test case</td>
-    <td>Count</td>
-    <td>Pass</td>
-    <td>Fail</td>
-    <td>Error</td>
-    <td>View</td>
-</tr>
-
-<tr class='errorClass'>
-    <td>LoginCase</td>
-    <td>3</td>
-    <td>1</td>
-    <td>1</td>
-    <td>1</td>
-    <td><a href="javascript:showClassDetail('c1',3)">Detail</a></td>
-</tr>
+        
+    <div class="btn-group btn-group-sm">
+        <button class="btn btn-default" onclick='javascript:showCase(0)'>总结</button>
+        <button class="btn btn-default" onclick='javascript:showCase(1)'>失败</button>
+        <button class="btn btn-default" onclick='javascript:showCase(2)'>全部</button>
+    </div>
+    <p></p>
+    <table id='result_table' class="table table-bordered">
+        <colgroup>
+            <col align='left' />
+            <col align='right' />
+            <col align='right' />
+            <col align='right' />
+            <col align='right' />
+            <col align='right' />
+        </colgroup>
+        <tr id='header_row'>
+            <td>测试套件/测试用例</td>
+            <td>总数</td>
+            <td>通过</td>
+            <td>失败</td>
+            <td>错误</td>
+            <td>查看</td>
+        </tr>
+        
+    <tr class='failClass'>
+        <td>LoginCase</td>
+        <td>4</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+        <td><a href="javascript:showClassDetail('c1',4)">详情</a></td>
+    </tr>
 
 <tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_email_error_1___amazing_2010_126_com____123456__: list() -> new empty list</div></td>
+    <td class='none'><div class='testcase'>test_login_1___amazing_2010_126_com____123456____emailorpw_error____帐号或密码错误__: list() -> new empty list</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
     <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
-        pass</a>
+        通过</a>
 
     <div id='div_pt1.1' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt1.1: 邮箱不正确验证成功
-
-
-        </pre>
+        <pre>pt1.1: amazing_2010@126.com 123456 emailorpw_error 帐号或密码错误
+</pre>
     </div>
     <!--css div popup end-->
 
     </td>
 </tr>
 
-<tr id='ft1.2' class='none'>
-    <td class='failCase'><div class='testcase'>test_email_error_2___ssdfff____123456__: list() -> new empty list</div></td>
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_login_2___amazing_2011_126_com____123456____emailorpw_error____帐号或密码错误__: list() -> new empty list</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
-        fail</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        通过</a>
 
-    <div id='div_ft1.2' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.2').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft1.2: 邮箱不正确验证失败
-Traceback (most recent call last):
-  File "D:\E\python-3.5.2\lib\site-packages\ddt.py", line 145, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:/F/pyworkspace/my126email/case/login_case.py", line 37, in test_email_error
-    self.assertTrue(email_e, "test_email_error测试通过")
-AssertionError: False is not true : test_email_error测试通过
-
-
-        </pre>
+    <div id='div_pt1.2' class="popup_window">
+        <pre>pt1.2: amazing_2011@126.com 123456 emailorpw_error 帐号或密码错误
+</pre>
     </div>
     <!--css div popup end-->
 
@@ -287,41 +277,109 @@ AssertionError: False is not true : test_email_error测试通过
 </tr>
 
 <tr id='ft1.3' class='none'>
-    <td class='errorCase'><div class='testcase'>test_pw_error: 密码错误</div></td>
+    <td class='failCase'><div class='testcase'>test_login_3___amazing_2010_126_com________pw_empty_error____请输入密码__: list() -> new empty list</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
     <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.3')" >
-        error</a>
+        失败</a>
 
     <div id='div_ft1.3' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.3').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft1.3: TypeError: test_pw_error() missing 2 required positional arguments: 'useremail' and 'pw'
-
-
-        </pre>
+        <pre>ft1.3: amazing_2010@126.com  pw_empty_error 请输入密码
+Traceback (most recent call last):
+  File "D:\E\python-3.5.2\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:/F/pyworkspace/my126email/case/login_case.py", line 42, in test_login
+    self.assertTrue(email_e, "测试通过")
+AssertionError: False is not true : 测试通过
+</pre>
     </div>
     <!--css div popup end-->
 
     </td>
 </tr>
 
-<tr id='total_row'>
-    <td>Total</td>
-    <td>3</td>
-    <td>1</td>
-    <td>1</td>
-    <td>1</td>
-    <td>&nbsp;</td>
+<tr id='ft1.4' class='none'>
+    <td class='failCase'><div class='testcase'>test_login_4_______123456____email_empty_error____请输入帐号__: list() -> new empty list</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.4')" >
+        失败</a>
+
+    <div id='div_ft1.4' class="popup_window">
+        <pre>ft1.4:  123456 email_empty_error 请输入帐号
+Traceback (most recent call last):
+  File "D:\E\python-3.5.2\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:/F/pyworkspace/my126email/case/login_case.py", line 42, in test_login
+    self.assertTrue(email_e, "测试通过")
+AssertionError: False is not true : 测试通过
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
-</table>
 
-<div id='ending'>&nbsp;</div>
+        <tr id='total_row'>
+            <td>总计</td>
+            <td>4</td>
+            <td>2</td>
+            <td>2</td>
+            <td>0</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
 
+        <div id='ending'>&nbsp;</div>
+        
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('chart'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title : {
+                text: '测试执行情况',
+                x:'center'
+            },
+            tooltip : {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            color: ['#95b75d', 'grey', '#b64645'],
+            legend: {
+                orient: 'vertical',
+                left: 'left',
+                data: ['通过','失败','错误']
+            },
+            series : [
+                {
+                    name: '测试执行情况',
+                    type: 'pie',
+                    radius : '60%',
+                    center: ['50%', '60%'],
+                    data:[
+                        {value:2, name:'通过'},
+                        {value:2, name:'失败'},
+                        {value:0, name:'错误'}
+                    ],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }
+            ]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+    
+    </div>
 </body>
 </html>
