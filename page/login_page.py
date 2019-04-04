@@ -15,6 +15,10 @@ class LoginPage(object):
     def __init__(self, driver):
         self.driver = driver
         self.fd_el = FindElement(self.driver)
+        '''
+        将切换frame放在初始化，下面查找的每个元素都在这个frame里，
+        如果不写在初始化中，那么下面的每个方法中都要执行一次切换frame
+        '''
         self.fd_el.iframe('login_iframe')
 
     def get_email_inputbox(self):
@@ -36,10 +40,10 @@ class LoginPage(object):
         return self.fd_el.get_element("emailorpw_error")
 
     def get_email_empty_error(self):
-        return self.fd_el.get_element("email_empty_msg")
+        return self.fd_el.get_element("email_empty_error")
 
     def get_pw_empty_error(self):
-        return self.fd_el.get_element("pw_empty_msg")
+        return self.fd_el.get_element("pw_empty_error")
 
 if __name__ == "__main__":
     driver = webdriver.Chrome()

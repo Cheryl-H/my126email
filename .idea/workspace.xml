@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f11597d3-7d95-4407-8c64-7432c593d563" name="Default" comment="">
+    <list default="true" id="f11597d3-7d95-4407-8c64-7432c593d563" name="Default" comment="完成ddt,报告格式使用新版">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/find_element.py" afterPath="$PROJECT_DIR$/base/find_element.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/login_business.py" afterPath="$PROJECT_DIR$/business/login_business.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/case/login_case.py" afterPath="$PROJECT_DIR$/case/login_case.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locate_element.ini" afterPath="$PROJECT_DIR$/config/locate_element.ini" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/login_page.py" afterPath="$PROJECT_DIR$/page/login_page.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/login_case.html" afterPath="$PROJECT_DIR$/report/login_case.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +28,8 @@
       <file leaf-file-name="find_element.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/base/find_element.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state relative-caret-position="-270">
+              <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
               <folding>
                 <element signature="e#191#221#0" expanded="true" />
               </folding>
@@ -37,13 +37,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login_page.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="login_page.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/page/login_page.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="828">
-              <caret line="47" column="26" lean-forward="false" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+            <state relative-caret-position="198">
+              <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="29" />
               <folding>
                 <element signature="e#186#227#0" expanded="true" />
+                <element signature="e#400#500#1" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -52,8 +53,8 @@
       <file leaf-file-name="login_handle.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/handle/login_handle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+            <state relative-caret-position="276">
+              <caret line="33" column="42" lean-forward="true" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
               <folding>
                 <element signature="e#189#226#0" expanded="true" />
               </folding>
@@ -64,8 +65,8 @@
       <file leaf-file-name="login_business.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/business/login_business.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+            <state relative-caret-position="-444">
+              <caret line="25" column="59" lean-forward="true" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
               <folding>
                 <element signature="e#191#221#0" expanded="true" />
               </folding>
@@ -76,40 +77,21 @@
       <file leaf-file-name="login_case.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/case/login_case.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="61" column="39" lean-forward="true" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
+            <state relative-caret-position="180">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
-                <element signature="e#187#209#0" expanded="true" />
+                <element signature="e#187#197#0" expanded="true" />
+                <element signature="e#1155#1199#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="suite.py" pinned="false" current-in-tab="false">
-        <entry file="file://D:/E/python-3.5.2/Lib/unittest/suite.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="read_ini.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/read_ini.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="557">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="locate_element.ini" pinned="false" current-in-tab="true">
+      <file leaf-file-name="locate_element.ini" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/locate_element.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="53" lean-forward="true" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+            <state relative-caret-position="108">
+              <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -138,13 +120,13 @@
         <option value="$PROJECT_DIR$/util/read_ini.py" />
         <option value="$PROJECT_DIR$/handle/login_handle.py" />
         <option value="$PROJECT_DIR$/base/445.py" />
-        <option value="$PROJECT_DIR$/page/login_page.py" />
-        <option value="$PROJECT_DIR$/base/find_element.py" />
-        <option value="$PROJECT_DIR$/business/login_business.py" />
-        <option value="$PROJECT_DIR$/config/locate_element.ini" />
         <option value="D:/E/python-3.5.2/Lib/HTMLTestRunner.py" />
-        <option value="$PROJECT_DIR$/case/login_case.py" />
         <option value="D:/E/python-3.5.2/Lib/HTMLTestRunner_PY3.py" />
+        <option value="$PROJECT_DIR$/config/locate_element.ini" />
+        <option value="$PROJECT_DIR$/business/login_business.py" />
+        <option value="$PROJECT_DIR$/case/login_case.py" />
+        <option value="$PROJECT_DIR$/base/find_element.py" />
+        <option value="$PROJECT_DIR$/page/login_page.py" />
       </list>
     </option>
   </component>
@@ -592,6 +574,14 @@
       <option name="presentableId" value="Default" />
       <updated>1552543910407</updated>
     </task>
+    <task id="LOCAL-00001" summary="完成ddt,报告格式使用新版">
+      <created>1554281459741</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1554281459741</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -640,6 +630,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="完成ddt,报告格式使用新版" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成ddt,报告格式使用新版" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="3" />
@@ -672,7 +666,8 @@
         <state relative-caret-position="954">
           <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
-            <element signature="e#187#209#0" expanded="true" />
+            <element signature="e#187#197#0" expanded="true" />
+            <element signature="e#1155#1199#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -717,6 +712,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#186#227#0" expanded="true" />
+            <element signature="e#400#500#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -746,7 +742,8 @@
         <state relative-caret-position="954">
           <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
-            <element signature="e#187#209#0" expanded="true" />
+            <element signature="e#187#197#0" expanded="true" />
+            <element signature="e#1155#1199#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -791,6 +788,7 @@
           <caret line="29" column="49" lean-forward="false" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
           <folding>
             <element signature="e#186#227#0" expanded="true" />
+            <element signature="e#400#500#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -820,7 +818,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#187#209#0" expanded="true" />
+            <element signature="e#187#197#0" expanded="true" />
+            <element signature="e#1155#1199#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -865,6 +864,7 @@
           <caret line="29" column="49" lean-forward="true" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
           <folding>
             <element signature="e#186#227#0" expanded="true" />
+            <element signature="e#400#500#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -894,7 +894,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#187#209#0" expanded="true" />
+            <element signature="e#187#197#0" expanded="true" />
+            <element signature="e#1155#1199#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -939,6 +940,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#186#227#0" expanded="true" />
+            <element signature="e#400#500#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -997,33 +999,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="764" column="24" lean-forward="true" selection-start-line="764" selection-start-column="24" selection-end-line="764" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/login_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="47" column="26" lean-forward="false" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
-          <folding>
-            <element signature="e#186#227#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base/find_element.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding>
-            <element signature="e#191#221#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/read_ini.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1033,26 +1008,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/login_business.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-          <folding>
-            <element signature="e#191#221#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/handle/login_handle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-          <folding>
-            <element signature="e#189#226#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1072,16 +1027,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/case/login_case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="61" column="39" lean-forward="true" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
-          <folding>
-            <element signature="e#187#209#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/E/python-3.5.2/Lib/unittest/suite.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -1090,11 +1035,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/util/read_ini.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/locate_element.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="53" lean-forward="true" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+        <state relative-caret-position="108">
+          <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/case/login_case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#187#197#0" expanded="true" />
+            <element signature="e#1155#1199#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/login_business.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-444">
+          <caret line="25" column="59" lean-forward="true" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+          <folding>
+            <element signature="e#191#221#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/find_element.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+          <folding>
+            <element signature="e#191#221#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handle/login_handle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="33" column="42" lean-forward="true" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+          <folding>
+            <element signature="e#189#226#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/login_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="29" />
+          <folding>
+            <element signature="e#186#227#0" expanded="true" />
+            <element signature="e#400#500#1" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -200,9 +200,9 @@
         
     <div class='page-header'>
         <h1>LoginCaseTestReport</h1>
-    <p class='attribute'><strong>开始时间:</strong> 2019-04-03 16:38:40</p>
-<p class='attribute'><strong>运行时长:</strong> 0:00:26.728766</p>
-<p class='attribute'><strong>状态:</strong> 通过 2 失败 2</p>
+    <p class='attribute'><strong>开始时间:</strong> 2019-04-04 14:14:12</p>
+<p class='attribute'><strong>运行时长:</strong> 0:00:39.512585</p>
+<p class='attribute'><strong>状态:</strong> 通过 4</p>
 
     </div>
     <div style="float: left;width:50%;"><p class='description'>20190318第一轮测试报告</p></div>
@@ -233,11 +233,11 @@
             <td>查看</td>
         </tr>
         
-    <tr class='failClass'>
+    <tr class='passClass'>
         <td>LoginCase</td>
         <td>4</td>
-        <td>2</td>
-        <td>2</td>
+        <td>4</td>
+        <td>0</td>
         <td>0</td>
         <td><a href="javascript:showClassDetail('c1',4)">详情</a></td>
     </tr>
@@ -251,7 +251,7 @@
         通过</a>
 
     <div id='div_pt1.1' class="popup_window">
-        <pre>pt1.1: amazing_2010@126.com 123456 emailorpw_error 帐号或密码错误
+        <pre>pt1.1: 实际asserttext： 帐号或密码错误
 </pre>
     </div>
     <!--css div popup end-->
@@ -268,7 +268,7 @@
         通过</a>
 
     <div id='div_pt1.2' class="popup_window">
-        <pre>pt1.2: amazing_2011@126.com 123456 emailorpw_error 帐号或密码错误
+        <pre>pt1.2: 实际asserttext： 帐号或密码错误
 </pre>
     </div>
     <!--css div popup end-->
@@ -276,22 +276,16 @@
     </td>
 </tr>
 
-<tr id='ft1.3' class='none'>
-    <td class='failCase'><div class='testcase'>test_login_3___amazing_2010_126_com________pw_empty_error____请输入密码__: list() -> new empty list</div></td>
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_login_3___amazing_2010_126_com________pw_empty_error____请输入密码__: list() -> new empty list</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.3')" >
-        失败</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        通过</a>
 
-    <div id='div_ft1.3' class="popup_window">
-        <pre>ft1.3: amazing_2010@126.com  pw_empty_error 请输入密码
-Traceback (most recent call last):
-  File "D:\E\python-3.5.2\lib\site-packages\ddt.py", line 145, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:/F/pyworkspace/my126email/case/login_case.py", line 42, in test_login
-    self.assertTrue(email_e, "测试通过")
-AssertionError: False is not true : 测试通过
+    <div id='div_pt1.3' class="popup_window">
+        <pre>pt1.3: 实际asserttext： 请输入密码
 </pre>
     </div>
     <!--css div popup end-->
@@ -299,22 +293,16 @@ AssertionError: False is not true : 测试通过
     </td>
 </tr>
 
-<tr id='ft1.4' class='none'>
-    <td class='failCase'><div class='testcase'>test_login_4_______123456____email_empty_error____请输入帐号__: list() -> new empty list</div></td>
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_login_4_______123456____email_empty_error____请输入帐号__: list() -> new empty list</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.4')" >
-        失败</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        通过</a>
 
-    <div id='div_ft1.4' class="popup_window">
-        <pre>ft1.4:  123456 email_empty_error 请输入帐号
-Traceback (most recent call last):
-  File "D:\E\python-3.5.2\lib\site-packages\ddt.py", line 145, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:/F/pyworkspace/my126email/case/login_case.py", line 42, in test_login
-    self.assertTrue(email_e, "测试通过")
-AssertionError: False is not true : 测试通过
+    <div id='div_pt1.4' class="popup_window">
+        <pre>pt1.4: 实际asserttext： 请输入帐号
 </pre>
     </div>
     <!--css div popup end-->
@@ -325,8 +313,8 @@ AssertionError: False is not true : 测试通过
         <tr id='total_row'>
             <td>总计</td>
             <td>4</td>
-            <td>2</td>
-            <td>2</td>
+            <td>4</td>
+            <td>0</td>
             <td>0</td>
             <td>&nbsp;</td>
         </tr>
@@ -361,8 +349,8 @@ AssertionError: False is not true : 测试通过
                     radius : '60%',
                     center: ['50%', '60%'],
                     data:[
-                        {value:2, name:'通过'},
-                        {value:2, name:'失败'},
+                        {value:4, name:'通过'},
+                        {value:0, name:'失败'},
                         {value:0, name:'错误'}
                     ],
                     itemStyle: {

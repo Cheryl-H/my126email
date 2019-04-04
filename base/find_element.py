@@ -15,9 +15,6 @@ from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import Select
-import traceback
-from selenium.common.exceptions import TimeoutException,NoSuchElementException
 from util.read_ini import ReadIni
 
 class FindElement(object):
@@ -33,16 +30,12 @@ class FindElement(object):
         try:
             if by == 'id':
                 return wait.until(EC.presence_of_element_located((By.ID, value)))
-                #return self.driver.find_element_by_id(value)
             elif by == 'name':
                 return wait.until(EC.presence_of_element_located((By.NAME, value)))
-                #return self.driver.find_element_by_name(value)
             elif by == 'classname':
                 return wait.until(EC.presence_of_element_located((By.CLASS_NAME, value)))
-                # return self.driver.find_element_by_class_name(value)
             else:
                 return wait.until(EC.presence_of_element_located((By.XPATH, value)))
-                # return self.driver.find_elements_by_xpath(value)
         except:
             return None
 

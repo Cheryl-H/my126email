@@ -9,7 +9,6 @@ __time__   : 2019/3/18 14:36
 
 """
 
-from time import sleep
 import ddt
 import unittest
 from business.login_business import LoginBusiness
@@ -36,37 +35,45 @@ class LoginCase(unittest.TestCase):
 
     @ddt.unpack
     def test_login(self,useremail, pw, assertcode, asserttext):
-        print(useremail, pw, assertcode, asserttext)
         email_e = self.login.login_function(useremail, pw, assertcode, asserttext)
-        sleep(1)
         self.assertTrue(email_e, "测试通过")
 
-    """
-    def test_email_error(self, useremail, pw):
-        '''邮箱错误'''
-        email_e = self.login.email_error(useremail, pw)
-        self.assertTrue(email_e, "test_email_error测试通过")
+    # def test_email_error(self, useremail, pw):
+    #     '''邮箱错误'''
+    #     email_e = self.login.email_error(useremail, pw)
+    #     self.assertTrue(email_e, "test_email_error测试通过")
+    #
+    # def test_pw_error(self, useremail, pw):
+    #     '''密码错误'''
+    #     pw_e = self.login.pw_error(useremail, pw)
+    #     self.assertTrue(pw_e, "test_pw_error测试通过")
 
-    def test_pw_error(self, useremail, pw):
-        '''密码错误'''
-        pw_e = self.login.pw_error(useremail, pw)
-        self.assertTrue(pw_e, "test_pw_error测试通过")
-    """
 
 if __name__ == "__main__":
+    # 创建测试用例集
     suite = unittest.TestSuite()
+    # 添加测试用例，方法一
     suite.addTest(unittest.makeSuite(LoginCase))
+
+    # 添加测试用例，方法二
     # suite.addTest(LoginCase('test_pw_error'))
     # suite.addTest(LoginCase('test_email_error'))
+
+    # 执行测试用例，方法一
+    # runner = unittest.TextTestRunner()
+    # runner.run(suite)
+
+    # 执行测试用例，方法二
     filepath = "D:\F\pyworkspace\my126email\\report\\login_case.html"
     f = open(filepath, 'wb')  # 以读写模式打开
-
     runner = HTMLTestRunner(stream=f,
                             verbosity=2,
                             title='LoginCaseTestReport',
                             description=u'20190318第一轮测试报告')
     runner.run(suite)
     f.close()
+
+
 
 
 
